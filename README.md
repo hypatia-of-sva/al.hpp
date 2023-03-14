@@ -13,7 +13,7 @@ al::load(); // loads the function pointer from a DLL
 ALCdevice* default_device = alc::openDevice(nullptr);
 ALCcontext* ctx = alc::createContext(default_device, nullptr);
 alc::makeContextCurrent(ctx);
-ALUint buffer;
+ALuint buffer;
 al::genBuffers(1,&buffer);
 // ....
 // use buffer, sources etc..
