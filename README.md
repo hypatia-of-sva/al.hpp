@@ -30,11 +30,19 @@ al::unload();
 b) by the new interface. It's intended to look eventually something like this:
 
 ```cpp
-al::device default_device; //default constructor loads DLL and opens the device
-al::listener my_listener {default_device}; // holds the context
-al::buffer my_buffer {default_device, data_ptr, data_ptr.size(), 44100U, al::format::mono16}; // sets the device, dat, length, frequency and format of the buffer
-al::source my_source {my_listener, my_buffer (al::vec3) {0.0, 0.1, 1.2}}; // sets the context, buffer, and 3D position of the source
+//default constructor loads DLL and opens the device
+al::device default_device; 
+// holds the context
+al::listener my_listener {default_device}; 
+// sets the device, dat, length, frequency and format of the buffer
+al::buffer my_buffer {default_device, data_ptr, data_ptr.size(), 44100U, al::format::mono16}; 
+// sets the context, buffer, and 3D position of the source
+al::source my_source {my_listener, my_buffer (al::vec3) {0.0, 0.1, 1.2}}; 
+
 my_source.play();
+//...
+
+//at the end of scope, call the corresponding cleanup functions.
 
 ```
 
