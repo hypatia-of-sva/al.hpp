@@ -17,7 +17,6 @@
 #define AL_HPP_REVISION_DATE 20230311L
 
 
-
 // preroll, copied out of vulkan.hpp (rev. 1.3.242) with changed macro names
 
 
