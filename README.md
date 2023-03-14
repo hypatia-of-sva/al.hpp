@@ -46,4 +46,4 @@ my_source.play();
 
 ```
 
-The eventual design of the API might be slightly different, but the idea is to give basic defaults for most things and to let the types do the cleanup like close devices, destroy buffers and hold the ```ALuint`` etc.
+The eventual design of the API might be slightly different, but the idea is to give basic defaults for most things and to let the types do the cleanup like close devices, destroy buffers and hold the ```ALuint``` etc.
