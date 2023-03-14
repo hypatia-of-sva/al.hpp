@@ -835,12 +835,11 @@ namespace al {
             const char* start = str;
             const char* end = str;
             for(;;) {
-                for(;*end != '\0'; ++end);
-                
-                if(start == end) break;
+                while(*end++);
+                if(end == start+1) break;
 
                 string_list.emplace_back(start);
-                start = ++end;
+                start = end;
             }
             return string_list;
         }
@@ -850,12 +849,11 @@ namespace al {
             const char* start = str;
             const char* end = str;
             for(;;) {
-                for(;*end != '\0'; ++end);
-                
-                if(start == end) break;
+                while(*end++);
+                if(end == start+1) break;
 
                 string_list.emplace_back(start,end-start);
-                start = ++end;
+                start = end;
             }
             return string_list;
         }
