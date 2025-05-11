@@ -776,6 +776,7 @@ namespace al {
 
     }
 
+    // this is a singleton with the same name as the class...
     std::unique_ptr<al::util::library> library = nullptr;
     bool loaded = false;
 
